@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>LeagueStats</title>
+    <link rel="stylesheet" href="LeagueStats_files/bootstrap.css">
+    <link rel="stylesheet" href="LeagueStats_files/css.css">
+    <link rel="stylesheet" href="LeagueStats_files/font-awesome.css">
+    <link rel="stylesheet" href="LeagueStats_files/ionicons.css">
+    <link rel="stylesheet" href="LeagueStats_files/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="LeagueStats_files/cursor-pointer.css">
+    <link rel="stylesheet" href="LeagueStats_files/Data-Table-1.css">
+    <link rel="stylesheet" href="LeagueStats_files/Data-Table.css">
+    <link rel="stylesheet" href="LeagueStats_files/dh-navbar-inverse.css">
+    <link rel="stylesheet" href="LeagueStats_files/Elegant-Registration-Form.css">
+    <link rel="stylesheet" href="LeagueStats_files/gradient-navbar-1.css">
+    <link rel="stylesheet" href="LeagueStats_files/gradient-navbar.css">
+    <link rel="stylesheet" href="LeagueStats_files/Header-Blue.css">
+    <link rel="stylesheet" href="LeagueStats_files/Pretty-Search-Form.css">
+    <link rel="stylesheet" href="LeagueStats_files/dataTables.css">
+    <link rel="stylesheet" href="LeagueStats_files/animate.css">
+    <link rel="stylesheet" href="LeagueStats_files/Login-Form-Clean.css">
+    <link rel="stylesheet" href="LeagueStats_files/Navigation-Clean.css">
+    <link rel="stylesheet" href="LeagueStats_files/styles.css">
+    <link rel="stylesheet" href="LeagueStats_files/Tabbed-Panel.css">
+    <style type="text/css">
+        .fb_hidden {
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+        
+        .fb_reposition {
+            overflow: hidden;
+            position: relative
+        }
+        
+        .fb_invisible {
+            display: none
+        }
+        
+        .fb_reset {
+            background: none;
+            border: 0;
+            border-spacing: 0;
+            color: #000;
+            cursor: auto;
+            direction: ltr;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            overflow: visible;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            visibility: visible;
+            white-space: normal;
+            word-spacing: normal
+        }
+        
+        .fb_reset>div {
+            overflow: hidden
+        }
+        
+        @keyframes fb_transform {
+            from {
+                opacity: 0;
+                transform: scale(.95)
+            }
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+        
+        .fb_animate {
+            animation: fb_transform .3s forwards
+        }
+        
+        .fb_dialog {
+            background: rgba(82, 82, 82, .7);
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+        
+        .fb_dialog_advanced {
+            border-radius: 8px;
+            padding: 10px
+        }
+        
+        .fb_dialog_content {
+            background: #fff;
+            color: #373737
+        }
+        
+        .fb_dialog_close_icon {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+            cursor: pointer;
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 18px;
+            top: 17px;
+            width: 15px
+        }
+        
+        .fb_dialog_mobile .fb_dialog_close_icon {
+            left: 5px;
+            right: auto;
+            top: 5px
+        }
+        
+        .fb_dialog_padding {
+            background-color: transparent;
+            position: absolute;
+            width: 1px;
+            z-index: -1
+        }
+        
+        .fb_dialog_close_icon:hover {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+        }
+        
+        .fb_dialog_close_icon:active {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+        }
+        
+        .fb_dialog_iframe {
+            line-height: 0
+        }
+        
+        .fb_dialog_content .dialog_title {
+            background: #6d84b4;
+            border: 1px solid #365899;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0
+        }
+        
+        .fb_dialog_content .dialog_title>span {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+            float: left;
+            padding: 5px 0 7px 26px
+        }
+        
+        body.fb_hidden {
+            height: 100%;
+            left: 0;
+            margin: 0;
+            overflow: visible;
+            position: absolute;
+            top: -10000px;
+            transform: none;
+            width: 100%
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+            min-height: 100%;
+            min-width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: 10001
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered {
+            background: none;
+            height: auto;
+            min-height: initial;
+            min-width: initial;
+            width: auto
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+            width: 100%
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+            background: none
+        }
+        
+        .loading.centered #fb_dialog_loader_close {
+            clear: both;
+            color: #fff;
+            display: block;
+            font-size: 18px;
+            padding-top: 20px
+        }
+        
+        #fb-root #fb_dialog_ipad_overlay {
+            background: rgba(0, 0, 0, .4);
+            bottom: 0;
+            left: 0;
+            min-height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10000
+        }
+        
+        #fb-root #fb_dialog_ipad_overlay.hidden {
+            display: none
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading iframe {
+            visibility: hidden
+        }
+        
+        .fb_dialog_mobile .fb_dialog_iframe {
+            position: sticky;
+            top: 0
+        }
+        
+        .fb_dialog_content .dialog_header {
+            background: linear-gradient(from(#738aba), to(#2c4987));
+            border-bottom: 1px solid;
+            border-color: #043b87;
+            box-shadow: white 0 1px 1px -1px inset;
+            color: #fff;
+            font: bold 14px Helvetica, sans-serif;
+            text-overflow: ellipsis;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+            vertical-align: middle;
+            white-space: nowrap
+        }
+        
+        .fb_dialog_content .dialog_header table {
+            height: 43px;
+            width: 100%
+        }
+        
+        .fb_dialog_content .dialog_header td.header_left {
+            font-size: 12px;
+            padding-left: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+        
+        .fb_dialog_content .dialog_header td.header_right {
+            font-size: 12px;
+            padding-right: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+        
+        .fb_dialog_content .touchable_button {
+            background: linear-gradient(from(#4267B2), to(#2a4887));
+            background-clip: padding-box;
+            border: 1px solid #29487d;
+            border-radius: 3px;
+            display: inline-block;
+            line-height: 18px;
+            margin-top: 3px;
+            max-width: 85px;
+            padding: 4px 12px;
+            position: relative
+        }
+        
+        .fb_dialog_content .dialog_header .touchable_button input {
+            background: none;
+            border: none;
+            color: #fff;
+            font: bold 12px Helvetica, sans-serif;
+            margin: 2px -12px;
+            padding: 2px 6px 3px 6px;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+        
+        .fb_dialog_content .dialog_header .header_center {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            text-align: center;
+            vertical-align: middle
+        }
+        
+        .fb_dialog_content .dialog_content {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+            border: 1px solid #4a4a4a;
+            border-bottom: 0;
+            border-top: 0;
+            height: 150px
+        }
+        
+        .fb_dialog_content .dialog_footer {
+            background: #f5f6f7;
+            border: 1px solid #4a4a4a;
+            border-top-color: #ccc;
+            height: 40px
+        }
+        
+        #fb_dialog_loader_close {
+            float: left
+        }
+        
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+        
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+            visibility: hidden
+        }
+        
+        #fb_dialog_loader_spinner {
+            animation: rotateSpinner 1.2s linear infinite;
+            background-color: transparent;
+            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px
+        }
+        
+        @keyframes rotateSpinner {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        .fb_iframe_widget {
+            display: inline-block;
+            position: relative
+        }
+        
+        .fb_iframe_widget span {
+            display: inline-block;
+            position: relative;
+            text-align: justify
+        }
+        
+        .fb_iframe_widget iframe {
+            position: absolute
+        }
+        
+        .fb_iframe_widget_fluid_desktop,
+        .fb_iframe_widget_fluid_desktop span,
+        .fb_iframe_widget_fluid_desktop iframe {
+            max-width: 100%
+        }
+        
+        .fb_iframe_widget_fluid_desktop iframe {
+            min-width: 220px;
+            position: relative
+        }
+        
+        .fb_iframe_widget_lift {
+            z-index: 1
+        }
+        
+        .fb_iframe_widget_fluid {
+            display: inline
+        }
+        
+        .fb_iframe_widget_fluid span {
+            width: 100%
+        }
+    </style>
+    <style id="style-1-cropbar-clipper">
+        /* Copyright 2014 Evernote Corporation. All rights reserved. */
+        
+        .en-markup-crop-options {
+            top: 18px !important;
+            left: 50% !important;
+            margin-left: -100px !important;
+            width: 200px !important;
+            border: 2px rgba(255, 255, 255, .38) solid !important;
+            border-radius: 4px !important;
+        }
+        
+        .en-markup-crop-options div div:first-of-type {
+            margin-left: 0px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body style="background-image: url(&quot;LeagueStats_files/billiards-2795499_1920.jpg&quot;);opacity: 0.80;" cz-shortcut-listen="true">
+    <script src="LeagueStats_files/sdk.js" async="" crossorigin="anonymous"></script>
+    <script id="facebook-jssdk" src="LeagueStats_files/sdk_002.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '504131113787857',
+                cookie: true,
+                xfbml: true,
+                status: true,
+                version: 'v5.0'
+            });
+
+            FB.AppEvents.logPageView();
+            //FB.Event.subscribe('auth.authResponseChange', auth_response_change_callback);  
+            FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
+
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container">
+        <div style="color: #f4dbaa;">
+            <nav class="navbar navbar-light navbar-expand-md text-left navigation-clean navbar-inverse navbar-fixed-top" style="background-color: rgb(61,61,61);padding-left: 8px;">
+                <div class="container">
+                    <div>
+                        <a class="navbar-brand" style="padding:0px;margin-left:0px;height:78px;" href="#"> <img src="LeagueStats_files/TGlogo.jpg" style="margin-left: 0px;"></a>
+                    </div>
+                    <a href="#" target="_top">
+                        <div class="fb-login-button fb_iframe_widget" data-width="" data-size="small" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" data-scope="public_profile, email" data-return-scopes="true" onlogin="checkLoginState();"
+                            login_text="" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=504131113787857&amp;auto_logout_link=true&amp;button_type=continue_with&amp;container_width=0&amp;locale=en_US&amp;scope=public_profile%2C%20email&amp;sdk=joey&amp;size=small&amp;use_continue_as=true"><span style="vertical-align: bottom; width: 167px; height: 20px;"><iframe name="f1feecdeb9e9c8a" title="fb:login_button Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none; visibility: visible; width: 167px; height: 20px;" src="LeagueStats_files/login_button.html" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <nav class="navbar navbar-light navbar-expand-md justify-content-end navigation-clean navbar-inverse navbar-fixed-top" style="padding: 0;background-color: rgb(61,61,61);">
+                <div class="container">
+                    <div><button data-toggle="collapse" class="navbar-toggler border-dark" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+                    <div class="collapse navbar-collapse" id="navcol-1" style="height: 40px;max-height: none;font-size: 14;">
+                        <ul class="nav navbar-nav ml-auto" style="margin-top:13px;">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" uk-scroll="offset:50" style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 5px;font-size: 14px;" href="https://billiardleaguestats.com/">Home </a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" uk-scroll="offset:50" style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 5px;font-size: 14px;" href="https://billiardleaguestats.com/divisions">Divisions</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" uk-scroll="offset:50" style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 5px;font-size: 14px;" href="https://billiardleaguestats.com/teamstandings">Team Standings</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" uk-scroll="offset:50" style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 5px;font-size: 14px;" href="https://billiardleaguestats.com/playerstats">PLayer Stats</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" uk-scroll="offset:50" style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 5px;font-size: 14px;" href="https://billiardleaguestats.com/matchscores">Matches</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" uk-scroll="offset:50" style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 5px;font-size: 14px;" href="https://billiardleaguestats.com/divschedule">Schedules</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-muted shadow-lg" style="background-color: #3d3d3d;color: #f4dbaa;">
+            <div class="row">
+                <div class="col">
+                    <h4 id="sheetheading" style="color: #f4dbaa;">CHALK OR WALK vs. RICK/FRED<br>Match Date: 2019-12-16</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-break"></div>
+                <div class="col text-right"><a id="teamstats" href="https://billiardleaguestats.com/teamstats"><i class="icon ion-tshirt"></i>&nbsp; Team Stats</a></div>
+            </div>
+            <div class="row text-nowrap" id="scorerow1">
+                <div class="col">
+                    <p style="color: #f4dbaa;">Round 1</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="table-responsive table-bordered text-left" id="scoretable1">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="text-black-50 bg-secondary" style="background-color: #3d3d3d;">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                            <th></th>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="scoretablebody1" style="color: #f4dbaa;">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>4</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>6</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>34</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td></td>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>31</td>
+                                            <td></td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">Round Total</td>
+                                            <td>30</td>
+                                            <td></td>
+                                            <td colspan="4">Round Total</td>
+                                            <td>30</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-nowrap" id="scorerow2">
+                <div class="col">
+                    <p style="color: #f4dbaa;">Round 2</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="table-responsive table-bordered" id="scoretable2">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="text-black-50 bg-secondary">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                            <th></th>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="scoretablebody2" style="color: #f4dbaa;">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>4</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>3</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>34</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td></td>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>31</td>
+                                            <td></td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">Round Total</td>
+                                            <td>27</td>
+                                            <td></td>
+                                            <td colspan="4">Round Total</td>
+                                            <td class="winner">31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-nowrap" id="scorerow3">
+                <div class="col">
+                    <p style="color: #f4dbaa;">Round 3</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="table-responsive table-bordered" id="scoretable3">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="text-black-50 bg-secondary">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                            <th></th>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="scoretablebody3" style="color: #f4dbaa;">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>7</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>34</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td></td>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>31</td>
+                                            <td></td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">Round Total</td>
+                                            <td>37</td>
+                                            <td></td>
+                                            <td colspan="4">Round Total</td>
+                                            <td>25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-nowrap" id="scorerow4">
+                <div class="col">
+                    <p style="color: #f4dbaa;">Round 4</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="table-responsive table-bordered" id="scoretable4">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="text-black-50 bg-secondary">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                            <th></th>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="scoretablebody4" style="color: #f4dbaa;">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>6</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>6</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>34</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td></td>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>31</td>
+                                            <td></td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">Round Total</td>
+                                            <td>32</td>
+                                            <td></td>
+                                            <td colspan="4">Round Total</td>
+                                            <td>33</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-nowrap" id="scorerow5">
+                <div class="col">
+                    <p style="color: #f4dbaa;">Round 5</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="table-responsive table-bordered" id="scoretable5">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="text-black-50 bg-secondary">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                            <th></th>
+                                            <th>#</th>
+                                            <th>Player &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                            <th>hcp</th>
+                                            <th>ero</th>
+                                            <th>pts</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="scoretablebody5" style="color: #f4dbaa;">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>7</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>6</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Paul Stacho</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td>2</td>
+                                            <td>Rick King</td>
+                                            <td>8</td>
+                                            <td></td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Rob Leblanc</td>
+                                            <td>8.5</td>
+                                            <td></td>
+                                            <td>7</td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>Fred Grinell</td>
+                                            <td>7.5</td>
+                                            <td></td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>34</td>
+                                            <td></td>
+                                            <td>0</td>
+                                            <td></td>
+                                            <td colspan="2">Avg Total</td>
+                                            <td>31</td>
+                                            <td></td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">Round Total</td>
+                                            <td>30</td>
+                                            <td></td>
+                                            <td colspan="4">Round Total</td>
+                                            <td>40</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <h6>Grand Total</h6>
+                                            </td>
+                                            <td>
+                                                <h6>156</h6>
+                                            </td>
+                                            <td></td>
+                                            <td colspan="4">
+                                                <h6>Grand Total</h6>
+                                            </td>
+                                            <td>
+                                                <h6>159</h6>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <h5>Round points</h5>
+                                            </td>
+                                            <td>
+                                                <h5>1.5</h5>
+                                            </td>
+                                            <td></td>
+                                            <td colspan="4">
+                                                <h5>Round points</h5>
+                                                <h5></h5>
+                                            </td>
+                                            <td>
+                                                <h5>4.5</h5>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <script src="LeagueStats_files/jquery.js"></script>
+    <script src="LeagueStats_files/bootstrap.js"></script>
+    <script src="LeagueStats_files/smart-forms.js"></script>
+    <script src="LeagueStats_files/mainpage.js"></script>
+    <script src="LeagueStats_files/playerlookup.js"></script>
+    <script src="LeagueStats_files/popdivisions.js"></script>
+    <script src="LeagueStats_files/popdivschedule.js"></script>
+    <script src="LeagueStats_files/popindivplayerstats.js"></script>
+    <script src="LeagueStats_files/poplifetime.js"></script>
+    <script src="LeagueStats_files/popmatchscores.js"></script>
+    <script src="LeagueStats_files/popplayerstats.js"></script>
+    <script src="LeagueStats_files/popscoresheet.js"></script>
+    <script src="LeagueStats_files/popteamsstandings.js"></script>
+    <script src="LeagueStats_files/popteamstats.js"></script>
+    <script src="LeagueStats_files/cookiemanager.js"></script>
+    <script src="LeagueStats_files/fbauth.js"></script>
+    <script src="LeagueStats_files/tableManager.js"></script>
+
+
+    <div id="fb-root" class=" fb_reset">
+        <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+            <div></div>
+            <div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none;"
+                    src="LeagueStats_files/xd_arbiter.html" frameborder="0"></iframe></div>
+        </div>
+    </div>
+</body>
+
+</html>
