@@ -9,6 +9,7 @@
         stroke-dasharray: 370 370;
         stroke-dashoffset: 370;
         animation: brush 4s forwards;
+        animation-delay: 1s;
     }
     
     @keyframes brush {
