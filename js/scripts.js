@@ -1,0 +1,3 @@
+$(function() {
+    $(".winner").addClass("circled");
+});

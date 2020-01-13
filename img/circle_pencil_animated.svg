@@ -8,7 +8,7 @@
         stroke-width: 4;
         stroke-dasharray: 370 370;
         stroke-dashoffset: 370;
-        animation: brush 4s forwards;
+        animation: brush 4s;
         animation-delay: 1s;
     }
     
